@@ -55,6 +55,122 @@
     .inputs,
     .card,
     .table-wrap,
+
+
+    .taxa-info {
+      margin: 0 0 22px;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(217, 45, 32, .18), rgba(255, 255, 255, .045)),
+        linear-gradient(180deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .038));
+      border: 1px solid rgba(217, 45, 32, .28);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .taxa-info::after {
+      content: "";
+      position: absolute;
+      inset: auto -18% -70% 45%;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255, 75, 58, .20), transparent 68%);
+      pointer-events: none;
+    }
+
+    .taxa-info-header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .taxa-info-header small {
+      color: var(--gold-2);
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .taxa-info-header h2 {
+      margin: 0;
+      font-size: clamp(1.25rem, 2vw, 1.8rem);
+      letter-spacing: -.04em;
+    }
+
+    .taxa-info-badge {
+      flex: 0 0 auto;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(0, 0, 0, .22);
+      color: var(--text);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .taxa-info-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .taxa-info-item {
+      border: 1px solid rgba(255, 255, 255, .11);
+      background: rgba(0, 0, 0, .18);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 150px;
+    }
+
+    .taxa-info-item span {
+      display: block;
+      color: var(--muted);
+      font-weight: 900;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+
+    .taxa-info-item strong {
+      display: block;
+      font-size: clamp(1.15rem, 1.6vw, 1.6rem);
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .taxa-info-item p {
+      margin: 0;
+      color: #d7d7d7;
+      line-height: 1.48;
+      font-size: .92rem;
+    }
+
+    .taxa-info-note {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(217, 45, 32, .12);
+      border: 1px solid rgba(217, 45, 32, .22);
+      color: #f7f7f7;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
     .insights {
       background: linear-gradient(180deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .038));
       border: 1px solid var(--line);
@@ -303,7 +419,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 14px;
       margin: 22px 0;
     }
@@ -322,6 +438,122 @@
       display: block;
       margin-top: 10px;
       font-size: 1.3rem;
+    }
+
+
+
+    .taxa-info {
+      margin: 0 0 22px;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(217, 45, 32, .18), rgba(255, 255, 255, .045)),
+        linear-gradient(180deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .038));
+      border: 1px solid rgba(217, 45, 32, .28);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .taxa-info::after {
+      content: "";
+      position: absolute;
+      inset: auto -18% -70% 45%;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255, 75, 58, .20), transparent 68%);
+      pointer-events: none;
+    }
+
+    .taxa-info-header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .taxa-info-header small {
+      color: var(--gold-2);
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .taxa-info-header h2 {
+      margin: 0;
+      font-size: clamp(1.25rem, 2vw, 1.8rem);
+      letter-spacing: -.04em;
+    }
+
+    .taxa-info-badge {
+      flex: 0 0 auto;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(0, 0, 0, .22);
+      color: var(--text);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .taxa-info-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .taxa-info-item {
+      border: 1px solid rgba(255, 255, 255, .11);
+      background: rgba(0, 0, 0, .18);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 150px;
+    }
+
+    .taxa-info-item span {
+      display: block;
+      color: var(--muted);
+      font-weight: 900;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+
+    .taxa-info-item strong {
+      display: block;
+      font-size: clamp(1.15rem, 1.6vw, 1.6rem);
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .taxa-info-item p {
+      margin: 0;
+      color: #d7d7d7;
+      line-height: 1.48;
+      font-size: .92rem;
+    }
+
+    .taxa-info-note {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(217, 45, 32, .12);
+      border: 1px solid rgba(217, 45, 32, .22);
+      color: #f7f7f7;
+      line-height: 1.5;
+      font-weight: 700;
     }
 
     .insights {
@@ -517,6 +749,22 @@
         flex-direction: column;
       }
 
+      .taxa-info {
+        padding: 20px;
+      }
+
+      .taxa-info-header {
+        flex-direction: column;
+      }
+
+      .taxa-info-badge {
+        white-space: normal;
+      }
+
+      .taxa-info-grid {
+        grid-template-columns: 1fr;
+      }
+
       table {
         min-width: 1400px;
       }
@@ -554,8 +802,8 @@
             <input id="prazo" type="number" value="220" step="1">
           </label>
           <label>
-            <span class="label-row"><span class="label-text">Taxa administrativa</span><button class="help-btn"
-                type="button" title="Ajuda sobre Taxa administrativa" aria-label="Ajuda sobre Taxa administrativa"
+            <span class="label-row"><span class="label-text">Taxa administrativa total do plano (%)</span><button class="help-btn"
+                type="button" title="Ajuda sobre Taxa administrativa total do plano" aria-label="Ajuda sobre Taxa administrativa total do plano"
                 onclick="abrirAjuda('taxaAdm')">?</button></span>
             <input id="taxaAdm" type="number" value="24.2" step="0.01">
           </label>
@@ -600,6 +848,8 @@
     </header>
 
     <section class="cards" id="cards"></section>
+
+    <section class="taxa-info" id="taxaInfo"></section>
 
     <section class="insights">
       <h2>Leitura automática</h2>
@@ -693,18 +943,30 @@ Prazo menor = parcela maior.`,
         exemplo: ''
       },
       taxaAdm: {
-        titulo: 'Taxa administrativa',
+        titulo: 'Taxa administrativa total do plano',
         texto: `O que é:
-Custo cobrado pela administradora para gerir o grupo.
+É o custo total cobrado pela administradora para gerir o consórcio durante todo o prazo contratado.
 
-Importante:
-Não é juros.
+Ponto principal:
+Essa taxa NÃO é descontada do crédito contratado.
 
 Exemplo:
-24,2%.
+Se o crédito contratado é de R$ 250.000, o cliente continua tendo R$ 250.000 como valor de referência da carta quando contemplado, conforme as regras do plano.
+
+Como é paga:
+A taxa administrativa entra no custo das parcelas ao longo do prazo do plano. Ela não é paga de uma única vez e não reduz o crédito contratado.
+
+Exemplo prático:
+Crédito contratado: R$ 250.000
+Taxa administrativa total: 24,2%
+Custo administrativo total: R$ 60.500
+
+Isso significa que o cliente não recebe R$ 189.500.
+O crédito contratado permanece R$ 250.000.
+Os R$ 60.500 representam o custo administrativo diluído nas parcelas.
 
 Impacto:
-Aumenta valor total pago.`,
+Esse custo precisa entrar na análise de retorno, lucro líquido e ROI, porque ele faz parte do total pago ao longo do consórcio.`,
         exemplo: ''
       },
       parcelaReduzida: {
@@ -822,7 +1084,8 @@ Reduz crédito líquido disponível, mas acelera contemplação.`,
       // Crédito reduzido + taxa adm = (Crédito * (1 - Parcela Reduzida)) + (Crédito * Taxa Adm)
       // Parcela Liberada = Crédito reduzido + taxa adm / Prazo
       const parcelaOriginal = (valorCredito * (1 + taxaAdm)) / prazo;
-      const creditoReduzidoComTaxa = (valorCredito * (1 - parcelaReduzida)) + (valorCredito * taxaAdm);
+      const valorTaxaAdministrativa = valorCredito * taxaAdm;
+      const creditoReduzidoComTaxa = (valorCredito * (1 - parcelaReduzida)) + valorTaxaAdministrativa;
       const parcelaLiberada = creditoReduzidoComTaxa / prazo;
 
       let credito = valorCredito;
@@ -860,26 +1123,64 @@ Reduz crédito líquido disponível, mas acelera contemplação.`,
       const melhorLance = linhas.reduce((a, b) => b.roiLance > a.roiLance ? b : a, linhas[0]);
       const melhorCDI = linhas.reduce((a, b) => b.roiCDI > a.roiCDI ? b : a, linhas[0]);
 
-      renderCards({ valorCredito, parcelaOriginal, parcelaLiberada, melhorSorteio, melhorLucro, breakEven, melhorLance, melhorCDI });
+      renderCards({ valorCredito, prazo, valorTaxaAdministrativa, parcelaOriginal, parcelaLiberada, melhorSorteio, melhorLucro, breakEven, melhorLance, melhorCDI });
+      renderTaxaInfo({ valorCredito, prazo, taxaAdm, valorTaxaAdministrativa });
       renderInsights({ melhorSorteio, melhorLucro, breakEven, melhorLance, melhorCDI, linhas });
       linhasAtuais = linhas;
       melhorMesAtual = melhorSorteio.mes;
       breakMesAtual = breakEven?.mes;
       renderTabela(linhas, melhorSorteio.mes, breakEven?.mes);
 
-      document.getElementById('formulaInfo').textContent = `Parcela liberada: ${dinheiro(parcelaLiberada)} • CDI a.m.: ${percentual(cdiMensal)}`;
+      document.getElementById('formulaInfo').textContent = `Custo administrativo total: ${dinheiro(valorTaxaAdministrativa)} • Pago dentro das parcelas • Crédito contratado não é reduzido • Parcela liberada: ${dinheiro(parcelaLiberada)} • CDI a.m.: ${percentual(cdiMensal)}`;
     }
 
     function renderCards(data) {
       const cards = [
         ['Crédito inicial', dinheiro(data.valorCredito), 'Base da carta simulada'],
-        ['Parcela original', dinheiro(data.parcelaOriginal), 'Crédito + taxa adm / prazo'],
+        ['Parcela original', dinheiro(data.parcelaOriginal), 'Crédito contratado + custo administrativo / prazo'],
         ['Parcela liberada', dinheiro(data.parcelaLiberada), 'Modelo com parcela reduzida'],
         ['Melhor ROI sorteio', percentual(data.melhorSorteio.roi), `${ordinal(data.melhorSorteio.mes)} • ${dinheiro(data.melhorSorteio.lucroLiquido)}`],
         ['Maior lucro líquido', dinheiro(data.melhorLucro.lucroLiquido), `${ordinal(data.melhorLucro.mes)} na modalidade sorteio`],
         ['Ponto de equilíbrio', data.breakEven ? ordinal(data.breakEven.mes) : 'Não atingido', data.breakEven ? dinheiro(data.breakEven.lucroLiquido) : 'Sem lucro positivo no prazo']
       ];
       document.getElementById('cards').innerHTML = cards.map(c => `<article class="card"><small>${c[0]}</small><strong>${c[1]}</strong><span>${c[2]}</span></article>`).join('');
+    }
+
+
+
+    function renderTaxaInfo(data) {
+      document.getElementById('taxaInfo').innerHTML = `
+        <div class="taxa-info-header">
+          <div>
+            <small>Entenda a composição do plano</small>
+            <h2>Como funciona o custo administrativo</h2>
+          </div>
+          <div class="taxa-info-badge">${percentual(data.taxaAdm)} no prazo total</div>
+        </div>
+
+        <div class="taxa-info-grid">
+          <div class="taxa-info-item">
+            <span>Crédito contratado</span>
+            <strong>${dinheiro(data.valorCredito)}</strong>
+            <p>Esse é o valor da carta usado como referência da contratação. Quando contemplado, o crédito contratado continua sendo este valor, conforme as regras do plano.</p>
+          </div>
+
+          <div class="taxa-info-item">
+            <span>Custo administrativo total</span>
+            <strong>${dinheiro(data.valorTaxaAdministrativa)}</strong>
+            <p>A taxa administrativa representa o custo total da administradora para gestão do grupo durante todo o prazo contratado de ${data.prazo} meses.</p>
+          </div>
+
+          <div class="taxa-info-item">
+            <span>Como esse valor é pago</span>
+            <strong>Dentro das parcelas</strong>
+            <p>Esse custo não é descontado do crédito contratado e não é pago de uma única vez. Ele compõe o valor das parcelas ao longo do plano.</p>
+          </div>
+        </div>
+
+        <div class="taxa-info-note">
+          Na prática: o cliente não recebe ${dinheiro(data.valorCredito - data.valorTaxaAdministrativa)}. O crédito contratado permanece ${dinheiro(data.valorCredito)}; o custo administrativo é considerado no total pago nas parcelas e por isso entra na análise de lucro líquido e ROI.
+        </div>`;
     }
 
     function renderInsights({ melhorSorteio, melhorLucro, breakEven, melhorLance, melhorCDI, linhas }) {
@@ -891,6 +1192,7 @@ Reduz crédito líquido disponível, mas acelera contemplação.`,
         `No cenário de <b>lance embutido</b>, o melhor ROI estimado aparece no ${ordinal(melhorLance.mes)}, com lucro líquido de ${dinheiro(melhorLance.lucroLiquido)}.`,
         `Comparando com o CDI, a melhor janela do sorteio ${vantagem} resultado financeiro do investimento a 100% do CDI no modelo da planilha.`,
         `No último mês, o crédito corrigido estimado chega a <b>${dinheiro(ultimo.credito)}</b>, com parcela de <b>${dinheiro(ultimo.parcela)}</b>.`,
+        `A taxa administrativa é considerada como <b>custo pago nas parcelas</b>; ela não reduz o crédito contratado recebido na contemplação.`,
         `A maior geração de lucro líquido no sorteio aparece no ${ordinal(melhorLucro.mes)}, totalizando <b>${dinheiro(melhorLucro.lucroLiquido)}</b>.`
       ];
       document.getElementById('insights').innerHTML = html.map(t => `<div class="insight">${t}</div>`).join('');
