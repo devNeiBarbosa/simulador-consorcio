@@ -320,7 +320,7 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(0, 0, 0, .68);
+      background: rgba(0, 0, 0, .72);
       backdrop-filter: blur(10px);
       display: none;
       align-items: center;
@@ -333,26 +333,53 @@
     }
 
     .modal {
-      width: min(520px, 100%);
+      width: min(500px, 100%);
+      max-height: 75vh;
+      overflow-y: auto;
       border-radius: 24px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, rgba(22, 26, 36, .98), rgba(10, 13, 20, .98));
       box-shadow: 0 32px 100px rgba(0, 0, 0, .55);
       padding: 24px;
       position: relative;
+      scrollbar-width: thin;
+      scrollbar-color: #d92d20 rgba(255, 255, 255, .06);
+    }
+
+    .modal::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .modal::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, .05);
+      border-radius: 999px;
+    }
+
+    .modal::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #b42318, #d92d20, #ff4b3a);
+      border-radius: 999px;
+    }
+
+    .modal::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #d92d20, #ff4b3a);
     }
 
     .modal h3 {
-      margin: 0 34px 10px 0;
-      font-size: 1.25rem;
+      margin: 0 48px 14px 0;
+      font-size: 1.15rem;
       letter-spacing: -.035em;
+      position: sticky;
+      top: -24px;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(22, 26, 36, .98), rgba(18, 21, 30, .98));
+      padding: 0 0 10px;
     }
 
     .modal p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.65;
-      font-size: .96rem;
+      line-height: 1.7;
+      font-size: .92rem;
       white-space: pre-line;
     }
 
@@ -366,9 +393,10 @@
     }
 
     .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
+      position: sticky;
+      top: 0;
+      float: right;
+      z-index: 3;
       width: 34px;
       height: 34px;
       border-radius: 999px;
@@ -377,6 +405,7 @@
       background: rgba(255, 255, 255, .08);
       border: 1px solid var(--line);
       cursor: pointer;
+      backdrop-filter: blur(10px);
     }
 
     input {
